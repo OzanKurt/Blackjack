@@ -10,10 +10,16 @@ import java.util.Scanner;
 
 public class Game {
 
-    private Dealer dealer = new Dealer();
-    private Player player = new Player();
+    private Dealer dealer;
+    private Player player;
 
-    private Deck deck = new Deck();
+    private Deck deck;
+
+    public Game() {
+        this.dealer = new Dealer();
+        this.player = new Player();
+        this.deck = new Deck();
+    }
 
     public void start() {
 

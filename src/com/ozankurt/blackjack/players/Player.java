@@ -8,9 +8,9 @@ public class Player {
 
     private static int currentPlayerId = 0;
 
-    protected int id;
-    protected Hand hand = new Hand();
-    protected State state;
+    private int id;
+    private Hand hand = new Hand();
+    private State state;
 
     public Player() {
         this.id = currentPlayerId++;
@@ -32,8 +32,20 @@ public class Player {
         return hand.getValue() == 21;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Hand getHand() {
         return hand;
+    }
+
+    public void setHand(Hand hand) {
+        this.hand = hand;
     }
 
     public State getState() {

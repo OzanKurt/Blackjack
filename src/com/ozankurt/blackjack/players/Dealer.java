@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 public class Dealer extends Player {
 
+    public Dealer() {
+        super();
+    }
+
     public boolean shouldDraw() {
         return getHand().getValue() <= 16;
     }
@@ -13,7 +17,7 @@ public class Dealer extends Player {
     public Hand getHiddenHand() {
         ArrayList<Card> cards = new ArrayList<>();
 
-        cards.add(hand.getCards().get(0));
+        cards.add(getHand().getCards().get(0));
 
         return new Hand(cards);
     }
