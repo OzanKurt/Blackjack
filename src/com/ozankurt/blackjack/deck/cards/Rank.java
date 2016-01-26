@@ -1,5 +1,7 @@
 package com.ozankurt.blackjack.deck.cards;
 
+import com.ozankurt.blackjack.utilities.StringUtilities;
+
 public enum Rank {
 
     TWO(2),
@@ -27,7 +29,7 @@ public enum Rank {
     }
 
     public String getName() {
-        return name().substring(0,1).toUpperCase() + name().substring(1).toLowerCase();
+        return StringUtilities.upperCaseFirst(name());
     }
 
     @Override
